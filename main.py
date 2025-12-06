@@ -74,9 +74,6 @@ def ir_to_machine_code(ir):
 
 
 def print_machine_code(machine_code):
-    """
-    Выводит машинный код в байтовом формате, как в тестах из спецификации.
-    """
     for i in range(0, len(machine_code), 5):
         cmd_bytes = machine_code[i:i+5]
         hex_str = ", ".join([f"0x{b:02X}" for b in cmd_bytes])
